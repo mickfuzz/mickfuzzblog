@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Game Patterns | make code platformer</title>
+<title>Making Games in Phaser and Glitch using Game Design Patterns</title>
 <meta name="generator" content="Jekyll v3.9.3" />
 <meta property="og:title" content="Game Patterns" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="getting-started-making-a-platformer-test1" />
 <meta property="og:description" content="getting-started-making-a-platformer-test1" />
-<link rel="canonical" href="https://mickfuzz.github.io/makecode-platformer-101/gamePatterns.html" />
-<meta property="og:url" content="https://mickfuzz.github.io/makecode-platformer-101/gamePatterns.html" />
+
 <meta property="og:site_name" content="make code platformer" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Game Patterns" />
+<meta property="twitter:title" content="Making Games in Phaser using Game Design Patterns" />
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -31,6 +30,218 @@
 
   </head>
   <body>
+
+
+
+    <div id="ToCslider" class="sidenav">
+        <h2>Table of contents </h2>
+        <hr>
+            <h4>OPENING SCENE</h4>
+
+          <div>
+              <a href="#introduction" class="chapter_link">Introduction</a>
+            </div>
+
+
+
+            <h4>JUMPING RIGHT IN</h4>
+
+
+
+            <div>
+              <a href="#jumping-right-in" class="chapter_link">Jumping Right In</a>
+            </div>
+
+
+
+            <div>
+              <a href="#choose-your-own-adventure" class="chapter_link">Choose your own Adventure</a>
+            </div>
+
+
+
+            <h4>CORE GAME PARTS</h4>
+
+
+
+            <div>
+              <a href="#building-a-world" class="chapter_link">Building a World</a>
+            </div>
+
+
+
+            <div>
+              <a href="#create-a-game-space" class="chapter_link">Create a Game Space</a>
+            </div>
+
+
+
+            <div>
+              <a href="#adding-movement" class="chapter_link">Adding Movement</a>
+            </div>
+
+
+
+            <div>
+              <a href="#adding-a-reward" class="chapter_link">Adding a Reward</a>
+            </div>
+
+
+
+            <div>
+              <a href="#hazards-and-enemies" class="chapter_link">Hazards and Enemies</a>
+            </div>
+
+
+
+            <h4>HOW OUR GAME FITS TOGETHER</h4>
+
+
+
+            <div>
+              <a href="#adding-game-states" class="chapter_link">Understanding our Game Structure </a>
+            </div>
+
+
+
+            <h4>GAME MECHANICS</h4>
+
+
+
+            <div>
+              <a href="#game-mechanic-add-moving-enemies" class="chapter_link">Game Mechanic: Add Moving Enemies</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-jumping-on-enemies" class="chapter_link">Game Mechanic: Jumping on Enemies</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-add-a-countdown-timer" class="chapter_link">Game Mechanic: Add a Countdown Timer</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-longer-jumps-if-holding-jump-down" class="chapter_link">Game Mechanic: Longer Jumps if Holding Jump Down</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-smaller-sprite-collision-boxes" class="chapter_link">Game Mechanic: Smaller Sprite Collision Boxes</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-extra-lives" class="chapter_link">Game Mechanic: Extra Lives</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-player-health" class="chapter_link">Game Mechanic: Player Health</a>
+            </div>
+
+
+
+            <h4>ADDING POLISH</h4>
+
+
+
+            <div>
+              <a href="#polish-adding-our-own-sound-effects" class="chapter_link">Polish: Adding our Own Sound Effects</a>
+            </div>
+
+
+
+            <div>
+              <a href="#polish-add-animation-to-your-character" class="chapter_link">Polish: Add Animation to your Character</a>
+            </div>
+
+
+
+            <div>
+              <a href="#polish-add-soundtrack-music" class="chapter_link">Polish: Add Soundtrack Music</a>
+            </div>
+
+
+
+            <div>
+              <a href="#polish-animate-sprite-when-zapped" class="chapter_link">Polish: Animate Sprite when Zapped</a>
+            </div>
+
+
+
+            <div>
+              <a href="#polish-screen-shake" class="chapter_link">Polish: Screen Shake</a>
+            </div>
+
+
+
+            <div>
+              <a href="#polish-explosions-using-particles" class="chapter_link">Polish: Explosions using Particles</a>
+            </div>
+
+
+
+            <h4>GAME SPACE</h4>
+
+
+
+            <div>
+              <a href="#polish-add-your-own-background" class="chapter_link">Game Space: Add your own Background</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-space-add-game-over-screen" class="chapter_link">Game Space: Add Game Over Screen</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-extending-the-game-size" class="chapter_link">Game Space: Extending the Game Size</a>
+            </div>
+
+
+
+            <div>
+              <a href="#polish-scaling-our-game-and-sprites" class="chapter_link">Game Space: Scaling Sprites</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-space-adding-levels" class="chapter_link">Game Space: Adding Levels</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-keys-and-doors" class="chapter_link">Game Space: Keys and Doors</a>
+            </div>
+
+
+
+            <div>
+              <a href="#polish-create-a-cut-opening-scene" class="chapter_link">Game Space: Create a Cut / Opening Scene</a>
+            </div>
+
+
+
+            <div>
+              <a href="#game-mechanic-adding-levels" class="chapter_link">Game Space: Adding Levels with Json</a>
+            </div>
+
+
+      </div>
 
     <div class="container">
 
@@ -144,7 +355,7 @@ less scary, by making quick changes which we can see the impact of. Like in a ga
 to move - <a href="https://web.archive.org/web/20210301145712/https://grid-game-template.glitch.me/">https://grid-game-template.glitch.me/</a></p>
 <p>You may notice that <b>the game is impossible</b>. It is. But the good news is we can fix it. To do this
 hit the two fishes at the top right of the screen and choose
-<strong>Remix on Glitch. </strong>Remixing means we create our own version of the game that we can change.  You now have the following challenges which are available as a <a href="https://web.archive.org/web/20210301145712/https://drive.google.com/file/d/1iL9fPP_ntsktGyBpX7u7-kTCnFuCDjdR/view?usp=sharing"> printed document of cards here.</a></p>
+<strong>Remix on Glitch. </strong>Remixing means we create our own version of the game that we can change.  You now have the following challenges which are available as a <a href="https://docs.google.com/presentation/d/1fZYko5dL-r3RHF6NZsLyZspBE77K8XIfLgnZ2HFj58Q/edit#slide=id.p"> printed document of cards here.</a></p>
 <div class="group_img" style="text-align: justify;"><div class="image bk-image-editor" style="width: 837.295px; height: 504.471px;"><strong><img style="width: 837.295px; height: 504.471px; transform: rotate(0deg) scaleX(1) scaleY(1); filter: contrast(100%) brightness(100%) blur(0px) opacity(100%) saturate(100%);" src="images/glitch_overview_1.png" alt="" transform-data="{&quot;imageWidth&quot;:837.2949906759907,&quot;imageHeight&quot;:504.47086247086247,&quot;imageTranslateX&quot;:0,&quot;imageTranslateY&quot;:0,&quot;imageScaleX&quot;:1,&quot;imageScaleY&quot;:1,&quot;imageRotateDegree&quot;:0,&quot;imageContrast&quot;:100,&quot;imageBrightness&quot;:100,&quot;imageBlur&quot;:0,&quot;imageSaturate&quot;:100,&quot;imageOpacity&quot;:100,&quot;frameWidth&quot;:837.2949906759907,&quot;frameHeight&quot;:504.47086247086247,&quot;frameFPI&quot;:false,&quot;editorWidth&quot;:898}" width="800" height="482"></strong></div></div>
 <p class=""> What follows is a list of the kinds of changes that are suggested on the cards. </p><p><strong>Starting challenge - Change Gravity: </strong>find the gravity variable and to change  the number so that you can
   complete the game. To do this change the following line. </p><pre>  var gravity = 500;
