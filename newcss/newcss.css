@@ -34,14 +34,15 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav */
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 10px;
+  color: #ffffff;
 }
 
 .floating-menu a {
   padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 12px;
-  /* color: #818181; */
-  color: #ffffff;
+  color: #818181;
+  /* color: #ffffff; */
   display: block;
   transition: 0.3s;
 }
