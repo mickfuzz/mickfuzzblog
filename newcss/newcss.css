@@ -8,8 +8,8 @@
   width: 230px;
   z-index: 100;
   /* position: fixed; */
-  overflow-x: hidden;
-  overflow-x: auto;
+  /* overflow-x: hidden;
+  overflow-x: auto; */
 }
 .floating-menu a,
 .floating-menu h3 {
