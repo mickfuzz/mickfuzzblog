@@ -28,7 +28,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav */
   width: 0;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 20;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
