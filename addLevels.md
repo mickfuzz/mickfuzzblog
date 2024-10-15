@@ -14,66 +14,50 @@ of design and even game mechanics to new levels.
 * **Links to other Computing Patterns:** [Systems Dynamics](learningDimensionss#systems-dynamics), [Change Listener](learningDimensions#change-listener)
 
 ## Putting the Pattern into Practice
-### Create a "level" variable
-Now we will reate a  variable to hold the number of level we are on. We will then be able to change it.
-We create this level variable at the end of our ***on start*** loop.
 
-![Create Variable](https://raw.githubusercontent.com/mickfuzz/getting-started-making-a-platformer-test1/master/images/addLevels2.png)
+Check our code: what we need to know and do<br></h2>
+<p>There is some background knowledge in this book that will be useful for us in getting this mechanic to work;</p>
+<ul><li>Adding Sprites in Groups - see <a href="http://write.flossmanuals.net/learn-javascript-with-phaser/create-a-game-space/"> Create a Game Space</a></li><li>Working with Loops - see <a href="http://write.flossmanuals.net/learn-javascript-with-phaser/adding-a-reward/"> Adding a Reward</a></li><li style="">Have a good grip of how all our code fits together - see <a href="#adding-game-states">Understanding our Game Structure</a><br></li></ul>
 
-![Add set Variable](https://raw.githubusercontent.com/mickfuzz/getting-started-making-a-platformer-test1/master/images/addLevels3.png)
+<div></div>
+<h3>Going over the code:</h3><p style="">The code for a minimal example of the code for adding levels in a simple way here- <a href="https://glitch.com/edit/#!/gamespace-more-levels-simple?path=js/game.js">https://glitch.com/edit/#!/gamespace-more-levels-simple?path=js/game.js</a><br></p><p>Note this global variable at the start of our code outside of any particular function. It is located here as it needs to be used by more than one function;</p>
+<pre> var currentLevel = 1;
+</pre>
 
-### Create a new chooseLevel Function
-Create a new Function by clicking on the **Advanced** tab on our toolbar, then  **Functions**
-And then click **Make a Function**. Enter chooseLevel in the white box.
+<p style="">This <b>currentLevel</b> variable keeps a track of what level we are on. It is set to <b>1</b> to start off with. Now in the create function - find the section where you design your levels using grids. Copy the formatting of levels one to three, to create a new level4  variable. This will look like the code below.  <br></p>
 
-![Add set Variable](https://raw.githubusercontent.com/mickfuzz/getting-started-making-a-platformer-test1/master/images/addLevels4.png)
+<pre>    var level4 = [
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                 ",
+        "                o",
+        "xxxxxxxxxxxxxxxxx"
+    ];
+</pre>
+<p style="">Next we also need to add another option to the section where the code finds out what level we are on and then sends that level to the loadLevel function to make the coins, platforms and enemies appear on the screen. Add this code to that section. <br></p>
+<pre>  } else if (currentLevel === 4) {
+    loadLevel(level4);
+  }
+</pre>
 
-### Move tilemap to new Function
-Drag only the  **set tilemap to** into the new **chooseLevel** function by holding down **Control** on your Keyboard while you drag the block.
-Right click and select **Format Code** to make the screen tidy.
 
+<p style="">We can keep adding more levels and using this way of designing them to add challenge to our game.<br></p><h3 style="">Having more control - Adding our different kinds of coins / enemies / platforms</h3><p style="">When we use the grid layout in this way there are limits in the way we use it. For example if we want to create a larger enemy than 32 pixels wide or high then we won't be able to do it well using this grid. </p><p style="">We have some options for how to overcome this limit. One way is to get rid of this grid completely and to design our levels from scratch, another is to keep the grid but also to add in our own elements to it. </p><p style="">Let's take the example of adding our own larger, or moving enemy. We can follow instructions for how to create one in this chapter - <a href="#game-mechanic-add-moving-enemies">Adding a moving enemy</a>.</p><p style="">In short we add 4 lines to our create function. If we are using our Grid Game Template, this has the side effect of making that moving enemy appear in the same place on every level. So to avoid that happening we will add the same code but we will add it only to level 1 by placing it in the following location. </p>
 
-### Add a link to the new function
-Drag in the **call chooseLevel** from **Functions** to the end of the begining of the **createLevel** function.
-
-![game level four](https://raw.githubusercontent.com/mickfuzz/makecode-platformer-101/master/images/new_level_4.png)
-
-### Create the Logic switcher for the Level Design
-Now add a Logic block **if true then** inside the **chooseLevel** block
-Move the the **set tilemap to**  inside the logic block.
-In the new **if true then** block replace **true** with at **0 = 0** block from Logic section.
-
-Right click on the Logic block **if level = 0** and duplicate it.
-Change 0 to 1 in the second block and drag it back into the **chooseLevel** function.
-
-Repeat the process again  changing the **level** number  to two.
-Move a **game over - win** block into to this gap and delete the **tilemap** block.  
-
-![game level four](https://raw.githubusercontent.com/mickfuzz/makecode-platformer-101/master/images/addLevels5.png)
-
-### Change the  overlap (change) Listener between Player and Goal Sprite  
-In our game we have a listener which is always checking to see if there is an overlap between our Player and the Goal Sprite.  
-In our starting template this lists only a Game Over - Lose block. Delete that block so the on overlap listener block is empty.
-
-![Remove Game over Block](https://raw.githubusercontent.com/mickfuzz/getting-started-making-a-platformer-test1/master/images/addLevels1.png)
-
-We will replace it with code that changes the level number and builds a new level and moves the player back to the starting point.
-
-### Code what happens when we complete a level
-In the **on sprite of kind Player overlaps Door** listener block add a **change level by 1** block.
-Next add call createLevels block to recall the function that does the work of adding the different blocks to the game.
-
-![insert change levels block](https://raw.githubusercontent.com/mickfuzz/getting-started-making-a-platformer-test1/master/images/addLevels7.png)
-
-### Remove any thing that might remain from the last level
-
-If you are not careful then some of the things from the last level like food or enemies may carry over to your next level. 
-
-From the **Sprites** area drag in a **destroy all sprites of kind xx** block to the start of the **createLevel** function. Change the option to **Food** or **Enemy** or what ever other kinds of object you may need to clear for the previous level.
-
-![Add set Variable](https://raw.githubusercontent.com/mickfuzz/getting-started-making-a-platformer-test1/master/images/addLevels8.png)
-
-In the image above all previous items of food are removed. You may need to several of these kinds of blocks for different types of items you add to your game.  
+<pre style="">    if (!currentLevel || currentLevel === 1) {
+      loadLevel(level1);
+      // add extra code for just level one here<br>
+      var enemy1 = game.add.sprite(370, 320, "enemy");
+      enemies.add(enemy1);
+      var tween1 = game.add.tween(enemy1);
+      tween1.to({x:170, y: 320}, 2000, null, true, 0,-1,true);
+</pre><p style="">We can see here that this will only appear on the first level. </p><p style="">We can now add our own moving enemies, or special power ups and custom size platforms, coins or hazards for each level.Have fun with this!<br></p><h3 style="">Other ideas to extend this mechanic</h3><p style="">Other ideas to extend this mechanic could include</p><ul><li style="">Adding a Game Over state - see <a href="#adding-game-states">Understanding our Game Structure</a><br></li><li style="">Loading platform and coin data more efficiently using Json - see <a href="#game-mechanic-adding-levels">Add Level Data with Json</a><br></li></ul><p>That's it. We hope you enjoy adding this game element to your game.</p>
 
 ## Test your Changes and Next Steps
 
