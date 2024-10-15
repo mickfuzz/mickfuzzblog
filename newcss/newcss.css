@@ -27,7 +27,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav */
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 20;
   left: 0;
   background-color: #111;
