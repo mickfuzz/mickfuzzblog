@@ -7,9 +7,11 @@
   width: 230px;
   position: fixed;
   z-index: 1;
-    color: #ffff00;
+  color: #ffff00;
   /* overflow-x: hidden;
   overflow-x: auto;*/
+  font-size:30px;
+  cursor:pointer;
 }
 
 
