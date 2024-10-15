@@ -15,7 +15,7 @@ of design and even game mechanics to new levels.
 
 ## Putting the Pattern into Practice
 
-Check our code: what we need to know and do<br></h2>
+<h2>Check our code: what we need to know and do<br></h2>
 <p>There is some background knowledge in this book that will be useful for us in getting this mechanic to work;</p>
 <ul><li>Adding Sprites in Groups - see <a href="http://write.flossmanuals.net/learn-javascript-with-phaser/create-a-game-space/"> Create a Game Space</a></li><li>Working with Loops - see <a href="http://write.flossmanuals.net/learn-javascript-with-phaser/adding-a-reward/"> Adding a Reward</a></li><li style="">Have a good grip of how all our code fits together - see <a href="#adding-game-states">Understanding our Game Structure</a><br></li></ul>
 
