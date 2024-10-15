@@ -22,6 +22,11 @@
 /* added from
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav */
 
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 11px;}
+}
+
 .floating-menu {
   height: 100%;
   width: 0;
