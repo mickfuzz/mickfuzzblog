@@ -37,7 +37,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav */
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
 .floating-menu a {
