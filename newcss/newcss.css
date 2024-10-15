@@ -1,23 +1,17 @@
 #floating-menu {
   /* margin-bottom: 200%; */
 }
-.floating-menu {
-  /* font-family: sans-serif;
-  background: blue;
+.menua {
+  font-family: sans-serif;
   padding: 5px;;
   width: 230px;
   z-index: 100; */
-  /* position: fixed; */
+  position: fixed;
+  z-index: 1;
   /* overflow-x: hidden;
-  overflow-x: auto; */
+  overflow-x: auto;
 }
-.floating-menu a,
-.floating-menu h3 {
-  /* font-size: 0.9em;
-  display: block;
-  margin: 0 0.5em;
-  color: white; */
-}
+
 
 /* added from
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav */

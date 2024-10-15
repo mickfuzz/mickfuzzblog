@@ -40,6 +40,9 @@
 
   <div id="floating-menu" class="floating-menu">
 
+
+
+
      <div>
        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
      </div>
@@ -187,21 +190,22 @@
   </div>
 
 
+  <div class="menua">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
+  <script>
+  function openNav() {
+    document.getElementById("floating-menu").style.width = "250px";
+  }
 
+  function closeNav() {
+    document.getElementById("floating-menu").style.width = "0";
+  }
+  </script>
+</div>
   <div class="container">
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
 
-    <script>
-    function openNav() {
-      document.getElementById("floating-menu").style.width = "250px";
-    }
-
-    function closeNav() {
-      document.getElementById("floating-menu").style.width = "0";
-    }
-    </script>
 
     <div class="row two-col">
       <div class="col-sm-12 col-lg-10 col-lg-offset-1">
