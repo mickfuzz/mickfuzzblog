@@ -2195,7 +2195,7 @@ var outofTime = function () {
                 with a hazard called hitHazard so we can add the following code to it. <br></p>
               <pre style="">var hitHazard = function (player, enemy) {
   splatNoise.play();
-  if (lives != 0) {
+  if (lives > 1) {
     lives--;
     game.state.start("play", true, false, lives, currentLevel);
   }
@@ -2206,9 +2206,9 @@ var outofTime = function () {
   }
 };
 </pre>
-              <p style="">We have a conditional statement which runs when the number of lives is more than 0. In this case, when we start our play state there is the option to pass the value of lives and the currentLevel along, this allows us to not
+              <p style="">We have a conditional statement which runs when the number of lives is more than 1. In this case, when we start our play state there is the option to pass the value of lives and the currentLevel along, this allows us to not
                 start from level one.</p>
-              <p style="">When the lives variable reaches 0 then the second condition which resets the values of lives to three again and resets the currentLevel variable to be 1. This has the effect of starting again. <br></p>
+              <p style="">When the lives variable reaches 1 then you are on your last life. Then when you hit a hazard, the second condition runs which resets the values of lives to three again and resets the currentLevel variable to be 1. This has the effect of starting the game again at the beginning with three lives. <br></p>
               <h3>Other ideas to extend this mechanic</h3>
               <p style="">Other ideas to extend this mechanic could include;<br></p>
               <ul>
