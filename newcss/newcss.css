@@ -9,6 +9,12 @@ ul {
   list-style-position: inside;
   padding-left: 5;
 }
+
+ol {
+  list-style-position: inside;
+  padding-left: 5;
+}
+
 .menua {
   font-family: sans-serif;
   padding: 5px;;
