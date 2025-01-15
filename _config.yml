@@ -1,3 +1,20 @@
-name: 3m design 
-title: null
-baseurl: /3m
+theme: minima
+# site.url: https://mickfuzz.github.io/phd4/
+header_pages:
+ - about.md
+ - index.md
+ - thesis_chapters.md
+ - book_chapters.md
+ - other.md
+
+
+title: MickFuzz Blog and Writing
+description: A test site for personal writing
+
+url: https://mickfuzz.github.io
+#url: https://localhost
+
+
+baseurl: /mickfuzz
+imgurl: https://github.com/mickfuzz/phd4/blob/master/
+show_excerpts: true
