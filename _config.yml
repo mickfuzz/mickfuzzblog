@@ -3,9 +3,8 @@ theme: minima
 header_pages:
  - about.md
  - index.md
- - thesis_chapters.md
- - book_chapters.md
- - other.md
+# - thesis_chapters.md
+#for reference how to categorise
 
 
 title: MickFuzz Blog and Writing
