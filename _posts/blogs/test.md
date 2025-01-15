@@ -10,4 +10,7 @@ title: Test Mick Fuzz
 ---
 
 ## thesis_chapters
-tst
+
+A test of the process.
+
+What about a Picture?
