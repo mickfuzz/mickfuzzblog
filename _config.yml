@@ -3,7 +3,7 @@ theme: minima
 header_pages:
  - about.md
  - index.md
-# - thesis_chapters.md
+ - blogs.md
 #for reference how to categorise
 
 
@@ -14,6 +14,6 @@ url: https://mickfuzz.github.io
 #url: https://localhost
 
 
-baseurl: /mickfuzz
-imgurl: https://github.com/mickfuzz/phd4/blob/master/
+baseurl: /mickfuzzblog
+imgurl: https://github.com/mickfuzz/mickfuzzblog/blob/master/
 show_excerpts: true
