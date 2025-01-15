@@ -3,6 +3,7 @@ theme: minima
 header_pages:
  - index.md
  - blogs.md
+ - other.md
 #for reference how to categorise
 
 
